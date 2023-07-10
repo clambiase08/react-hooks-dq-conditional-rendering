@@ -1,10 +1,6 @@
 import React from "react";
 
-function MenuBar({
-  menuDisplay,
-  setDetails,
-  details
-}) {
+function MenuBar({ setDetails, details }) {
   /*
 
   The 'span' tags below are the menu items. Think about the way a menu 
@@ -17,32 +13,39 @@ function MenuBar({
   */
 
   function handleClick(selected) {
-    setDetails(selected)
+    setDetails(selected);
   }
-  
 
   return (
-    <>
-      <div className="ui four item menu">
-        <span onClick={() => handleClick("profile")} className={details === "profile" ? "item active" : "item"}>
-          <i className="user large icon" />
-        </span>
+    <div className="ui four item menu">
+      <span
+        onClick={() => handleClick("profile")}
+        className={details === "profile" ? "item active" : "item"}
+      >
+        <i className="user large icon" />
+      </span>
 
-        <span onClick={() => handleClick("photo")} className={details === "photo" ? "item active" : "item"}>
-          <i className="photo large icon" />
-        </span>
+      <span
+        onClick={() => handleClick("photo")}
+        className={details === "photo" ? "item active" : "item"}
+      >
+        <i className="photo large icon" />
+      </span>
 
-        <span onClick={() => handleClick("cocktail")} className={details === "cocktail" ? "item active" : "item"}>
-          <i className="cocktail large icon" />
-        </span>
+      <span
+        onClick={() => handleClick("cocktail")}
+        className={details === "cocktail" ? "item active" : "item"}
+      >
+        <i className="cocktail large icon" />
+      </span>
 
-        <span onClick={() => handleClick("pokemon")} className={details === "pokemon" ? "item active" : "item"}>
-          <i className=" themeisle large icon" />
-        </span>
-      </div>
-
-      <div>{menuDisplay}</div>
-    </>
+      <span
+        onClick={() => handleClick("pokemon")}
+        className={details === "pokemon" ? "item active" : "item"}
+      >
+        <i className=" themeisle large icon" />
+      </span>
+    </div>
   );
 }
 

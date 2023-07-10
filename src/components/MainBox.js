@@ -27,7 +27,8 @@ function MainBox() {
 
   return (
     <div>
-      <MenuBar menuDisplay={menuDisplay} setDetails={setDetails} details={details} />
+      <MenuBar setDetails={setDetails} details={details} />
+      {menuDisplay}
     </div>
   );
 }
